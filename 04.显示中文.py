@@ -27,7 +27,7 @@ _xsticks += ["11点{}分".format(i) for i in range(60)]
 # format(),一个格式化字符，用{}和：来代替%符号
 
 # 取步长，数字和字符串一一对应
-plt.xticks(_x[::3], _xsticks[::3], rotation=45)  # rotation  旋转的角度参数
+plt.xticks(_x, _xsticks[::3], rotation=45)  # rotation  旋转的角度参数
 plt.yticks(b)
 
 plt.show()

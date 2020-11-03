@@ -15,17 +15,17 @@ fig = plt.figure(figsize=(15, 8), dpi=80)
 x = range(2, 26, 2)  # 从2到26，步长为2
 y = [15, 13, 14.5, 17, 20, 25, 26, 26, 24, 22, 18, 15]  # 对应的y值
 
-#绘图
+# 绘图
 plt.plot(x, y)  # 传入x和y的值
 
-#设置x轴的刻度
-#plt.xticks(x)#这样子就把所有x的值都标记上去了
-#plt.xticks(range(2,25))#这样子的x轴刻度值就是一了
-#如果还要更密集一点，考虑做一个列表
-xtick=[i/2 for i in range(2,49)]
-plt.xticks(xtick[::3])#取列表的步长以简略
-#y轴也是一样有着yticks这样的一个管理y轴刻度的值
-plt.yticks(range(min(y),max(y)+1))
+# 设置x轴的刻度
+# plt.xticks(x)#这样子就把所有x的值都标记上去了
+# plt.xticks(range(2,25))#这样子的x轴刻度值就是一了
+# 如果还要更密集一点，考虑做一个列表
+xtick = [i / 2 for i in range(2, 49)]
+plt.xticks(xtick[::3])  # 取列表的步长以简略
+# y轴也是一样有着yticks这样的一个管理y轴刻度的值
+plt.yticks(range(min(y), max(y) + 1))
 # 保存图片
 plt.savefig("sig_size.png")
 plt.show()  # 展示坐标图
